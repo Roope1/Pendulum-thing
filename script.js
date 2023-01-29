@@ -10,7 +10,7 @@ let pendulums = [];
 function setup() {
     createCanvas(800, 800);
     for (let i = 0; i <= 10; i++) {
-        pendulums.push(new Pendulum(50 + (i * 25)))
+        pendulums.push(new Pendulum(25 + (i * 25)))
     }
 }
 
@@ -48,7 +48,7 @@ class Pendulum {
         
         // TODO: rework this, so every ball has the same movement speed
 
-        this.angle += abs(350 - this.length) / 10000 * this.direction;
+        this.angle += abs(325 - this.length) / 10000 * this.direction;
 
         this.x = this.length * cos(this.angle);
         this.y = this.length * sin(this.angle);
